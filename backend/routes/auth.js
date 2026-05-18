@@ -4,6 +4,11 @@ const User = require('../models/User');
 
 const router = express.Router();
 
+// GET endpoint for testing
+router.get('/', (req, res) => {
+  res.json({ message: 'Auth API is running. Use POST /login or /register' });
+});
+
 router.post('/register', async (req, res) => {
   try {
     const { name, email, password } = req.body;

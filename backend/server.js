@@ -17,6 +17,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.json({ status: 'OK', message: 'Backend is healthy' });
+});
+
 app.use('/api/auth', authRoute);
 app.use('/api/notes', notesRoute);
 app.use('/api/tasks', tasksRoute);
