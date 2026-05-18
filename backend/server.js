@@ -19,8 +19,8 @@ const app = express();
 const corsOptions = {
   origin: [
     'http://localhost:3000',
-    'https://taskopt.vercel.app', // Replace with your actual Vercel frontend URL
-    process.env.FRONTEND_URL // Optional: add from environment
+    'https://taskopt-88yo.vercel.app',
+    process.env.FRONTEND_URL
   ],
   credentials: true
 };
