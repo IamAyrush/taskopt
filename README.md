@@ -37,7 +37,7 @@ A secure note-taking application with user authentication, JWT tokens, and note 
    
 3. Update environment variables:
    ```
-   MONGODB_URI=mongodb://127.0.0.1:27017/?directConnection=true
+   MONGODB_URI=mongodb-url
    JWT_SECRET=your_super_secret_key_change_in_production
    PORT=5000
    ```
