@@ -14,7 +14,18 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+
+// CORS configuration to allow Vercel frontend
+const corsOptions = {
+  origin: [
+    'http://localhost:3000',
+    'https://taskopt.vercel.app', // Replace with your actual Vercel frontend URL
+    process.env.FRONTEND_URL // Optional: add from environment
+  ],
+  credentials: true
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Health check endpoint
